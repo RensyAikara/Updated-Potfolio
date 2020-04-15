@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .newclass {
+            background-color: #2db19e;
+            color: white;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            /* padding: 10px; */
+            height: 60px;
+            margin-top: -8px;
+            margin-bottom: -8px;
+            margin-left: 10px;
+        }
+
+        .col-12 {
+            text-align: center;
+        }
+
+        .thirdclass {
+            background-color: #e2e3e4;
+        }
+
+        .card {
+            padding: 20px;
+            margin-top: 40px;
+            margin-left: 0px;
+            background-color: rgba(245, 245, 245, 0.1);
+        }
+
+        .card-title {
+            text-align: left;
+            color: #094940;
+            font-family: 'Times New Roman', Times, serif;
+            font-size:xx-large;
+        }
+
+        img {
+            float: left;
+            padding-bottom: 30px;
+            width: 75%;
+            height: 200px;
+        }
+
+        p {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        body {
+            background-color: #e2e3e4;
+            background-image:url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+
+        .text-new {
+            position: relative;
+            /* bottom: 10px; */
+            top: 60%;
+            width: 100%;
+            margin-left: 0px;
+            background-color: #c95511;
+            color: white;
+            text-align: center;
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .imageClass{
+            border: black;
+            border-width: 5px;
+        }
+        .marquee {
+            position: relative;
+            overflow: hidden;
+            --offset: 20vw;
+            --move-initial: calc(-25% + var(--offset));
+            --move-final: calc(-50% + var(--offset));
+        }
+
+        .marquee__inner {
+            width: fit-content;
+            display: flex;
+            position: relative;
+            transform: translate3d(var(--move-initial), 0, 0);
+            animation: marquee 5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        .marquee:hover .marquee__inner {
+            animation-play-state: running;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate3d(var(--move-initial), 0, 0);
+            }
+
+            100% {
+                transform: translate3d(var(--move-final), 0, 0);
+            }
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="row"></div>
+            <div class="col-md-4 col-12 navbar-brand newclass">Rensy Aikara</div>
+            <div class="col-md-3"></div>
+            <div class="col-md-5 col-12 navbar-nav marquee">
+                <div class="row marquee__inner" aria-hidden="true">
+                    <div class="col-md-4 col-4" style="display: inline-block;">
+                        <a class="nav-link" href="index.html" style="color: grey;">About</a>
+                    </div>
+                    <div class="col-md-4 col-4" style="display: inline-block;">
+                        <a class="nav-link" href="portfolio.html" style="color: grey;">Portfolio</a>
+                    </div>
+                    <div class="col-md-4 col-4" style="display: inline-block;">
+                        <a class="nav-link" href="contact.html" style="color: grey;">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 card">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="card-title">Portfolio</h5>
+                        <hr>
+                    </div>
+                </div>
+                <!-- <div class="row"> -->
+                <div class="row">
+                    <div class="col-md-6 col-12 imageClass">
+                        <!-- click on image to ope first project -->
+                        <a id="link">
+                            <img id = "firstProject">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-12  imageClass">
+                        <a id="linkedinProfileLink">
+                            <img id = "linkedin">
+                        </a>
+                    </div>
+                </div>
+                <div></div>
+                <div class="row">
+                    <div class="col-md-6 col-12  imageClass">
+                        <a id="githubLink">
+                            <img id = "githubimage">
+                        </a>
+                    </div>
+                 </div>   
+            </div>
+        </div>
+    </div>
+    <script src="./newportfolio.js"></script>
+</body>
+
+</html>
